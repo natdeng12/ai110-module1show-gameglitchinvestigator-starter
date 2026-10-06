@@ -54,11 +54,31 @@ Describe your fixed game in numbered steps so a reader can follow along without 
 
 ## 🧪 Test Results
 
-```
-# Paste your pytest output here, e.g.:
-# pytest tests/
-# ========================= X passed in 0.XXs =========================
-```
+### Advanced Edge-Case Testing
+
+I added three pytest cases to test edge cases in the `parse_guess()` function:
+
+* An empty input
+* A non-numeric input
+* A negative number
+
+The tests verify that the game handles these inputs correctly without crashing.
+
+The final pytest run passed all 8 tests:
+
+      
+tests/test_game_logic.py::test_winning_guess PASSED                         [ 12%]
+tests/test_game_logic.py::test_guess_too_high PASSED                        [ 25%]
+tests/test_game_logic.py::test_guess_too_low PASSED                         [ 37%]
+tests/test_game_logic.py::test_bug1_high_guess_says_go_lower PASSED         [ 50%]
+tests/test_game_logic.py::test_bug1_low_guess_says_go_higher PASSED         [ 62%]
+tests/test_game_logic.py::test_parse_guess_empty_string PASSED              [ 75%]
+tests/test_game_logic.py::test_parse_guess_non_numeric PASSED               [ 87%]
+tests/test_game_logic.py::test_parse_guess_negative_number PASSED           [100%]
+
+=============================== 8 passed in 1.63s ================================
+
+
 
 ## 🚀 Stretch Features
 
